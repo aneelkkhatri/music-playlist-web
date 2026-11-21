@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Playlists</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .playlist-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+      padding-bottom: 2em;
+
+    }
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      gap: 1.2em;
+      padding: 1em 0;
+      border-bottom: 1px solid #222;
+      cursor: pointer;
+      transition: background 0.2s;
+      background: #23263a;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #0006, 0 1.5px 6px #00bfae44;
+      padding: 2em;
+    }
+    .playlist-item:last-child {
+      border-bottom: none;
+    }
+    .thumbs-grid {
+      display: grid;
+      grid-template-columns: 80px 80px;
+      grid-template-rows: 80px 80px;
+      gap: 0.5em;
+    }
+    .playlist-thumb {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #222;
+      box-shadow: 0 2px 12px #00bfae44, 0 1px 4px #0006;
+    }
+    .playlist-title {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.2em;
+    }
+    .playlist-meta {
+      color: #b3b3b3;
+      font-size: 0.95em;
+      opacity: 0.8;
+    }
+    
+    .channel-url,.playlist-url {
+      font-size: 0.9em;
+      color: #b3b3b3;
+      opacity: 0.7;
+      margin-top: 0.2em;
+      word-break: break-all;
+    }
+
+    .playlist-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Available Playlists</h1>
+  <div class="playlist-list" id="playlist-list"></div>
+  <script src="list.js"></script>
+</body>
+</html>
